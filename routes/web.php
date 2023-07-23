@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ToolsController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\AgentTableController;
+use App\Http\Controllers\AgentChartsController;
+use App\Http\Controllers\AgentFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,8 @@ Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name(
 Route::get('/home/tools', [ToolsController::class, 'tool'])->middleware('auth')->name('home.tools');
 Route::get('/home/payment', [PaymentController::class, 'payment'])->middleware('auth')->name('home.payment');
 Route::get('/home/tables', [AgentTableController::class, 'tables'])->middleware('auth')->name('agent.tables');
+Route::get('/home/charts', [AgentChartsController::class, 'chart'])->middleware('auth')->name('agent.charts');
+Route::get('/home/form', [AgentFormController::class, 'form'])->middleware('auth')->name('agent.agentform');
 
 
 /*Route::get('/dashboard', function () {

@@ -26,7 +26,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
-  
+    
     <header class="header">   
       <nav class="navbar navbar-expand-lg">
         <div class="search-panel">
@@ -42,7 +42,7 @@
         </div>
         <div class="container-fluid d-flex align-items-center justify-content-between">
           <div class="navbar-header">
-            <!-- Navbar Header--><a href="../Agent/index.html" class="navbar-brand">
+            <!-- Navbar Header--><a href="{{route('home')}}" class="navbar-brand">
               <div class="brand-text brand-big visible text-uppercase"><strong class="text-primary">Dark</strong><strong>Admin</strong></div>
               <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
             <!-- Sidebar Toggle Btn-->
@@ -52,19 +52,19 @@
             <div class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></div>
             <div class="list-inline-item dropdown"><a id="navbarDropdownMenuLink1" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link messages-toggle"><i class="icon-email"></i><span class="badge dashbg-1">5</span></a>
               <div aria-labelledby="navbarDropdownMenuLink1" class="dropdown-menu messages"><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="../Agent/img/avatar-3.jpg" alt="..." class="img-fluid">
+                  <div class="profile"><img src="Agent/img/avatar-3.jpg" alt="..." class="img-fluid">
                     <div class="status online"></div>
                   </div>
                   <div class="content">   <strong class="d-block">Nadia Halsey</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">9:30am</small></div></a><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="../Agent/img/avatar-2.jpg" alt="..." class="img-fluid">
+                  <div class="profile"><img src="Agent/img/avatar-2.jpg" alt="..." class="img-fluid">
                     <div class="status away"></div>
                   </div>
                   <div class="content">   <strong class="d-block">Peter Ramsy</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">7:40am</small></div></a><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="../Agent/img/avatar-1.jpg" alt="..." class="img-fluid">
+                  <div class="profile"><img src="Agent/img/avatar-1.jpg" alt="..." class="img-fluid">
                     <div class="status busy"></div>
                   </div>
                   <div class="content">   <strong class="d-block">Sam Kaheil</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">6:55am</small></div></a><a href="#" class="dropdown-item message d-flex align-items-center">
-                  <div class="profile"><img src="../Agent/img/avatar-5.jpg" alt="..." class="img-fluid">
+                  <div class="profile"><img src="Agent/img/avatar-5.jpg" alt="..." class="img-fluid">
                     <div class="status offline"></div>
                   </div>
                   <div class="content">   <strong class="d-block">Sara Wood</strong><span class="d-block">lorem ipsum dolor sit amit</span><small class="date d-block">10:30pm</small></div></a><a href="#" class="dropdown-item text-center message"> <strong>See All Messages <i class="fa fa-angle-right"></i></strong></a></div>
@@ -182,8 +182,8 @@
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
                 <li><a href="{{route('home')}}"> <i class="icon-home"></i>Home </a></li>
-                <li class="active"><a href="{{route('agent.tables')}}"> <i class="icon-grid"></i>Tables </a></li>
-                <li><a href="{{route('agent.charts')}}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
+                <li><a href="{{route('agent.tables')}}"> <i class="icon-grid"></i>Tables </a></li>
+                <li class="active"><a href="{{route('agent.charts')}}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
                 <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
@@ -205,176 +205,84 @@
         <!-- Page Header-->
         <div class="page-header no-margin-bottom">
           <div class="container-fluid">
-            <h2 class="h5 no-margin-bottom">Tables</h2>
+            <h2 class="h5 no-margin-bottom">Charts</h2>
           </div>
         </div>
         <!-- Breadcrumb-->
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Tables            </li>
+            <li class="breadcrumb-item"><a href="{{ route('home')}}">Home</a></li>
+            <li class="breadcrumb-item active">Charts            </li>
           </ul>
         </div>
-        <section class="no-padding-top">
+        <section>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="block margin-bottom-sm">
-                  <div class="title"><strong>Basic Table</strong></div>
-                  <div class="table-responsive"> 
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
+              <div class="col-lg-8">
+                <div class="line-chart block chart">
+                  <div class="title"><strong>Line Chart Example</strong></div>
+                  <canvas id="lineChartCustom1"></canvas>
+                </div>
+              </div>
+              <div class="col-lg-4">       
+                <div class="lin-chart block chart">
+                  <div class="title"><strong>Line Chart Example</strong></div>
+                  <div class="line-chart chart margin-bottom-sm">
+                    <canvas id="lineChartCustom2"></canvas>
+                  </div>
+                  <div class="line-chart chart">
+                    <canvas id="lineChartCustom3"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="chart block">
+                  <div class="title"> <strong>Bar Chart Example</strong></div>
+                  <div class="bar-chart chart margin-bottom-sm">
+                    <canvas id="barChartCustom1"></canvas>
+                  </div>
+                  <div class="bar-chart chart">
+                    <canvas id="barChartCustom2"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="bar-chart block chart">
+                  <div class="title"><strong>Bar Chart Example</strong></div>
+                  <div class="bar-chart chart">
+                    <canvas id="barChartCustom3"></canvas>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="block margin-bottom-sm">
-                  <div class="title"><strong>Striped Table</strong></div>
-                  <div class="table-responsive"> 
-                    <table class="table table-striped">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter  </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="pie-chart chart block">
+                  <div class="title"><strong>Pie Chart Example</strong></div>
+                  <div class="pie-chart chart margin-bottom-sm">
+                    <canvas id="pieChartCustom1"></canvas>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="block">
-                  <div class="title"><strong>Striped table with hover effect</strong></div>
-                  <div class="table-responsive"> 
-                    <table class="table table-striped table-hover">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter       </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="doughnut-chart chart block">
+                  <div class="title"><strong>Pie Chart Example</strong></div>
+                  <div class="doughnut-chart chart margin-bottom-sm">
+                    <canvas id="doughnutChartCustom1"></canvas>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="block">
-                  <div class="title"><strong>Compact Table</strong></div>
-                  <div class="table-responsive"> 
-                    <table class="table table-striped table-sm">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>First Name</th>
-                          <th>Last Name</th>
-                          <th>Username</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Larry</td>
-                          <td>the Bird</td>
-                          <td>@twitter      </td>
-                        </tr>
-                        <tr>
-                          <th scope="row">4</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">5</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="polar-chart chart block">
+                  <div class="title"><strong>Polar Chart Example</strong></div>
+                  <div class="polar-chart chart margin-bottom-sm">
+                    <canvas id="polarChartCustom"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="radar-chart chart block">
+                  <div class="title"><strong>Radar Chart Example</strong></div>
+                  <div class="radar-chart chart margin-bottom-sm">
+                    <canvas id="radarChartCustom"></canvas>
                   </div>
                 </div>
               </div>
@@ -384,7 +292,8 @@
         <footer class="footer">
           <div class="footer__block block no-margin-bottom">
             <div class="container-fluid text-center">
-              <p class="no-margin-bottom">2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a>.</p>
+              <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+               <p class="no-margin-bottom">2018 &copy; Your company. Download From <a target="_blank" href="https://templateshub.net">Templates Hub</a>.</p>
             </div>
           </div>
         </footer>
@@ -397,6 +306,7 @@
     <script src="../Agent/vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="../Agent/vendor/chart.js/Chart.min.js"></script>
     <script src="../Agent/vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../Agent/js/charts-custom.js"></script>
     <script src="../Agent/js/front.js"></script>
   </body>
 </html>
